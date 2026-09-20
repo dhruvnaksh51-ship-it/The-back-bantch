@@ -1,0 +1,542 @@
+/* ==========================================
+   THE DAYS WE NEVER KNEW
+   Official Website CSS
+   Part 1
+========================================== */
+
+:root{
+    --bg:#d8c3a5;
+    --surface:#fcf7ee;
+    --surface-alt:#1f2937;
+    --text:#000000;
+    --muted:#d1d5db;
+    --primary:#d8c3a5;
+    --primary-hover:#fcf7ee;
+    --border:#a67c52;
+    --nav-bg:rgba(10,10,10,.45);
+    --overlay:rgba(0,0,0,.65);
+}
+
+body.dark-theme{
+    
+    --bg:#0d1117;
+    --surface:#111827;
+    --surface-alt:#1f2937;
+    --text:#000000;
+    --muted:#d1d5db;
+    --primary:#4f46e5;
+    --primary-hover:#6366f1;
+    --border:rgba(255,255,255,.08);
+    --nav-bg:rgba(10,10,10,.45);
+    --overlay:rgba(0,0,0,.65);
+}
+
+body.light-theme{
+    --bg:#f8fafc;
+    --surface:#e2e8f0;
+    --surface-alt:#cbd5e1;
+    --text:#000000;
+    --muted:#475569;
+    --primary:#4f46e5;
+    --primary-hover:#4338ca;
+    --border:rgba(15,23,42,.13);
+    --nav-bg:rgba(248,250,252,.95);
+    --overlay:rgba(255,255,255,.70);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body.light-theme{
+    background:var(--bg);
+    color:var(--text);
+} 
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4f46e5;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#6366f1;
+}
+/* ===========================
+        NAVBAR
+=========================== */
+.nav-links.show{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:80px;
+    right:20px;
+    background:#2d241b;
+    padding:20px;
+    border-radius:15px;
+}
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(44,30,20,.90);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.logo img{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+}
+
+.logo h2{
+
+color:#fff;
+
+font-size:28px;
+
+font-family:'Cinzel',serif;
+
+}
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+.nav-links li{
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#d8b47a;
+
+}
+/* ==========================
+   Theme Toggle Button
+========================== */
+
+.theme-toggle{
+
+position:fixed;
+
+top:20px;
+
+right:80px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#8b5e3c;
+
+color:#fff;
+
+font-size:22px;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:1000;
+
+}
+
+.theme-toggle:hover{
+
+background:#6f4a2f;
+
+transform:scale(1.1);
+
+}
+
+/* ==========================
+   Menu Button
+========================== */
+
+.menu-btn{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#8b5e3c;
+
+color:#fff;
+
+font-size:24px;
+
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:1000;
+
+}
+
+.menu-btn:hover{
+
+background:#6f4a2f;
+
+transform:scale(1.1);
+
+}
+/*==========================================
+            PREMIUM NAVBAR
+==========================================*/
+
+.navbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 60px;
+
+background:rgba(44,30,20,.92);
+
+backdrop-filter:blur(15px);
+
+border-bottom:2px solid rgba(255,255,255,.08);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+z-index:9999;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+border:2px solid #ac8b5a;
+
+}
+
+.logo h2{
+
+color:#fff;
+
+font-size:28px;
+
+font-family:'Cinzel',serif;
+
+letter-spacing:1px;
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+list-style:none;
+
+margin:0;
+padding:0;
+
+}
+
+.nav-links a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:600;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+background:#8b5e3c;
+
+color:#fff;
+
+transform:translateY(-3px);
+
+box-shadow:0 8px 20px rgba(139,94,60,.35);
+
+}
+
+.nav-links a.active{
+
+background:#8b5e3c;
+
+}
+
+.theme-toggle,
+.menu-btn{
+
+width:48px;
+
+height:48px;
+
+border:none;
+
+border-radius:50%;
+
+background:#8b5e3c;
+
+color:#fff;
+
+font-size:20px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+transition:.3s;
+
+}
+
+.theme-toggle:hover,
+.menu-btn:hover{
+
+background:#6f4a2f;
+
+transform:scale(1.08);
+
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+padding:15px 20px;
+
+}
+
+.logo h2{
+
+font-size:22px;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+}
+/* ===========================
+   VINTAGE PAPER THEME
+=========================== */
+
+body{
+
+margin:0;
+padding:0;
+
+font-family:'Poppins',sans-serif;
+
+color:#3b2a1a;
+
+background:
+linear-gradient(rgba(255,248,230,.88),rgba(255,248,230,.88)),
+url("images/old-paper.jpg");
+
+background-size:cover;
+
+background-attachment:fixed;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+}
+
+/*==========================================
+        PREMIUM START READING BUTTON
+==========================================*/
+
+.read-btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:18px 45px;
+
+font-size:20px;
+
+font-weight:700;
+
+text-decoration:none;
+
+color:#fff;
+
+background:linear-gradient(135deg,#b08d57,#8b5e3c);
+
+border-radius:50px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.30);
+
+transition:.35s;
+
+animation:glow 2s infinite;
+
+}
+
+.read-btn:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+background:linear-gradient(135deg,#c79a5b,#6f4a2f);
+
+}
+
+@keyframes glow{
+
+        0%{
+
+        box-shadow:0 0 10px rgba(176,141,87,.4);
+
+        }
+
+        50%{
+
+        box-shadow:0 0 30px rgba(176,141,87,.9);
+
+        }
+
+        100%{
+
+        box-shadow:0 0 10px rgba(176,141,87,.4);
+
+}
+}
